@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .content div {
+      background: #2196F3;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 1201px) {
+      .content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="header">Row 1: Full Width Header</div>
+
+  <div class="content">
+    <div>Second Row - Column 1</div>
+    <div>Second Row - Column 2</div>
+  </div>
+</div>
+
+</body>
+</html>
