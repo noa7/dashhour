@@ -3,57 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Grid Example</title>
+  <title>Responsive Grid Page</title>
   <style>
     body {
       margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
 
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr;
       grid-template-rows: auto auto;
       gap: 20px;
+      padding: 20px;
     }
 
     .header {
-      background-color: #4CAF50;
+      background: #4CAF50;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
-    .content {
+    .main-body {
       display: grid;
-      grid-template-columns: 1fr;
       gap: 20px;
     }
 
-    .content div {
+    .row1 {
       background: #2196F3;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
-    @media (min-width: 1201px) {
-      .content {
+    .row2 {
+      display: grid;
+      gap: 20px;
+    }
+
+    .row2 div {
+      background: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    @media (min-width: 1200px) {
+      .row2 {
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    @media (max-width: 1199px) {
+      .row2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
 
 <div class="grid-container">
-  <div class="header">Row 1: Full Width Header</div>
+  <div class="header">Header: Full Width</div>
 
-  <div class="content">
-    <div>Second Row - Column 1</div>
-    <div>Second Row - Column 2</div>
+  <div class="main-body">
+    <div class="row1">Row 1: Full Width Content</div>
+
+    <div class="row2">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
   </div>
 </div>
 
