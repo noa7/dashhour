@@ -3,47 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Grid Page</title>
+  <title>Minimal Responsive Grid</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     .grid-container {
       display: grid;
       grid-template-rows: auto auto;
-      gap: 20px;
-      padding: 20px;
     }
 
     .header {
       background: #4CAF50;
       color: white;
-      padding: 20px;
       text-align: center;
     }
 
     .main-body {
       display: grid;
-      gap: 20px;
     }
 
     .row1 {
       background: #2196F3;
       color: white;
-      padding: 20px;
       text-align: center;
     }
 
     .row2 {
       display: grid;
-      gap: 20px;
     }
 
     .row2 div {
       background: #f1f1f1;
-      padding: 20px;
       text-align: center;
       border: 1px solid #ccc;
     }
@@ -59,7 +53,6 @@
         grid-template-columns: 1fr;
       }
     }
-
   </style>
 </head>
 <body>
