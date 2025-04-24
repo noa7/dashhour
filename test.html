@@ -5,49 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minimal Responsive Grid</title>
   <style>
+    /* reset all spacing */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* two rows: header + main body */
     .grid-container {
       display: grid;
       grid-template-rows: auto auto;
     }
 
-    .header {
-      background: #4CAF50;
-      color: white;
-      text-align: center;
-    }
-
+    /* make the main-body itself a grid */
     .main-body {
       display: grid;
     }
 
-    .row1 {
-      background: #2196F3;
-      color: white;
-      text-align: center;
-    }
-
+    /* row2 becomes 2 cols ≥1200px, 1 col otherwise */
     .row2 {
       display: grid;
     }
-
-    .row2 div {
-      background: #f1f1f1;
-      text-align: center;
-      border: 1px solid #ccc;
-    }
-
     @media (min-width: 1200px) {
       .row2 {
         grid-template-columns: 1fr 1fr;
       }
     }
-
     @media (max-width: 1199px) {
       .row2 {
         grid-template-columns: 1fr;
@@ -57,19 +41,19 @@
 </head>
 <body>
 
-<div class="grid-container">
-  <div class="header">Header: Full Width</div>
+  <div class="grid-container">
+    <div class="header">Header: Full Width</div>
 
-  <div class="main-body">
-    <div class="row1">Row 1: Full Width Content</div>
+    <div class="main-body">
+      <div class="row1">Row 1: Full Width Content</div>
 
-    <div class="row2">
-      <div>Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
+      <div class="row2">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+      </div>
     </div>
   </div>
-</div>
 
 </body>
 </html>
